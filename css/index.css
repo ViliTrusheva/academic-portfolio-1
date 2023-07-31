@@ -1,0 +1,262 @@
+@import url("https://p.typekit.net/p.css?s=1&k=cjc5amk&ht=tk&f=39106.39107.39110.39115&a=100619205&app=typekit&e=css");
+
+@font-face {
+  font-family: Avenir;
+  src: url(../fonts/Avenir.ttc);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Typography -------------------------------------------------------*/
+h1 {
+  font-family: Avenir;
+  color: #1e35f5;
+  font-size: 4vw;
+}
+
+h2 {
+  font-family: Avenir;
+  color: #1e35f5;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: Avenir;
+  color: #141414;
+  font-size: 1.5vw;
+}
+
+p {
+  font-family: Avenir;
+  color: #141414;
+  font-size: 1.5vw;
+  margin: auto;
+  padding: 0.4vw;
+}
+
+a {
+  font-family: AkkuratMono, monospace;
+  color: #141414;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 1.8vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+/* WELCOME SCREEN -------------------------------------------------------*/
+#loading-screen-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #f7f7f7;
+  font-size: 2rem;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+#hello-world {
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* NAV ----------------------------------------------------------------------*/
+/* Flexboxes Header*/
+nav {
+  display: flex;
+  margin: auto;
+  margin-top: 1.5vw;
+  margin-bottom: 0.3vw;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid;
+  border-color: #1e35f5;
+}
+
+.nav-container a {
+  margin-left: 40vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav1-logo {
+  flex: 3;
+  font-family: AkkuratMono, monospace;
+  letter-spacing: 0.1vw;
+}
+
+#nav2 {
+  flex: 1;
+}
+
+#nav2 {
+  flex: 1;
+}
+
+/* Flexboxes Main ------------------------------------------------------------*/
+.landing-screen-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  flex-basis: 90%;
+  flex-direction: row;
+  margin: 0 auto;
+  height: auto;
+}
+
+.landing-screen-container section {
+  margin-top: 10vw;
+  padding: 2vw;
+}
+
+#box-one {
+  flex: 1;
+  order: 1;
+}
+
+#box-two {
+  flex: 1;
+  flex-direction: column;
+  order: 2;
+  padding: 6vw;
+  padding-left: 2vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+#portfolio-logo {
+  position: relative;
+  width: 40vw;
+  left: 0vw;
+  padding: 0.7vw;
+}
+
+/* back to top------------------------------------------------------ */
+#top-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(../graphics/back-to-top.svg);
+  width: 80px;
+  height: 75px;
+  background-repeat: no-repeat;
+  transform: scale(0.5);
+  cursor: pointer;
+}
+
+/* MEDIA QIUERIES---------------------------------------------------------------- */
+/* // Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+  #loading-screen-container {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  a {
+    font-family: AkkuratMono, monospace;
+    color: #141414;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 4vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin: 0.5vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 3.5vw;
+    margin: 3vw;
+  }
+
+  .landing-screen-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  #box-one {
+    flex: 1;
+    order: 1;
+  }
+
+  #box-two {
+    flex: 1;
+    flex-direction: column;
+    order: 2;
+    padding: 6vw;
+    padding-left: 2vw;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #portfolio-logo {
+    position: relative;
+    width: 80vw;
+    left: 0vw;
+    padding: 0.7vw;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* ... */
+}
